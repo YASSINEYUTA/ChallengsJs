@@ -1,28 +1,14 @@
-/*
-
-
-// تحدي map filter find - array of object
-let movies = [
-    { id: 1, title: "Interstellar", rating: 8.6, category: "Sci-Fi" },
-    { id: 2, title: "The Dark Knight", rating: 9.0, category: "Action" },
-    { id: 3, title: "Joker", rating: 8.4, category: "Drama" },
-    { id: 4, title: "Inception", rating: 8.8, category: "Sci-Fi" },
-    { id: 5, title: "Avengers", rating: 8.0, category: "Action" }
+let products = [
+    { id: 101, details: { title: "Laptop", price: 1000 }, stock: 5 },
+    { id: 102, details: { title: "Mouse", price: 50 }, stock: 0 },
+    { id: 103, details: { title: "Monitor", price: 300 }, stock: 12 },
+    { id: 104, details: { title: "Keyboard", price: 80 }, stock: 0 }
 ];
 
+let a = products
+.filter( m => m.stock > 0 )
+.map( m=> m.details.title)
 
-let mov = movies.find(m => m.title === "Joker");
+console.log(  ` متوفر ${a.length} في المخزون  \n${a.join(' ')} ` )
 
-
-let filt = movies.filter(m => m.category === "Action")
-
-let m = movies.map( m => m.title)
-
-console.log(filt)
-console.log(mov)
-console.log(m)
-
-
-
-*/
 
